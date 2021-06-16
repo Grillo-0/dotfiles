@@ -4,22 +4,6 @@
 "   ◣                        ◢   "
 
 
-"Instala automaticamente o gerenciador de plugins Vim Plug e instala os
-if empty(glob('~/.vim/autoload/plug.vim'))
- silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" autocmd VimEnter * PlugInstall --sync | source $MYVIMRC "instala automaticamente os plugins
-endif
-
-" :PlugInstall para instalar os plugins listados abaixo
-call plug#begin('~/.vim/plugged')
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'lervag/vimtex'
-	Plug 'tpope/vim-fugitive'
-call plug#end()
-let g:airline_powerline_fonts = 1
 
 
 
