@@ -1,29 +1,11 @@
-"   ◤                        ◥   "
-"    Gerenciador de Plugins      "
-"            Vim Plug            "
-"   ◣                        ◢   "
+"   ◤        ◥   "
+"      MAPS      "
+"   ◣        ◢   "
 
-
-
-
-
-
-
-"   ◤                        ◥   "
-"    INÍCIO DAS CONFIGURAÇÕES    "
-"   ◣                        ◢   "
-
-
-"Muda o leader de / para ,
 let mapleader = ","
 let g:neocomplete#enable_at_startup = 1
 let g:NERDSpaceDelims = 1 "add um espaco no comando de comentar
 
-
-
-"   ◤        ◥   "
-"      MAPS      "
-"   ◣        ◢   "
 "leader + f altera entre numero absoluto e relativo
 map <leader>f :set relativenumber!<CR>
 
@@ -60,9 +42,6 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellesca
 autocmd FileType c map <F9> : !gcc % && ./a.out <CR>
 
 
-"   ◤       ◥   "
-"     CORES     "
-"   ◣       ◢   "
 
 "   ◤          ◥   "
 "    Indentação    "
