@@ -12,9 +12,6 @@ map <leader>f :set relativenumber!<CR>
 " Y age como D e C, copia ate o final da linha, ao inves de agir como yy
 map Y y$
 
-"toggle gundo plugin(ver a arvore de undos)
-nnoremap <leader>u :GundoToggle<CR>
-
 "leader + espaço remove o highlight da pesquisa
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -56,8 +53,6 @@ let delimitMate_expand_cr=1
 set shiftwidth=4 "tamanho do tab na indentacao
 set tabstop=4 "tab 4 espacos
 
-" Colorscheme
-colorscheme dracula
 
 
 "   ◤         ◥   "

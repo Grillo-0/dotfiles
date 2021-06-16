@@ -15,4 +15,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'
 	Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+
+" Vim-Airline(Status Bar)
 let g:airline_powerline_fonts = 1
+
+" Colorscheme
+colorscheme dracula
