@@ -30,15 +30,6 @@ map <right> <nop>
 "ç para voltar pro modo normal
 imap jj <Esc>
 
-"F9 para executar código
-"python
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
-"C
-autocmd FileType c map <F9> : !gcc % && ./a.out <CR>
-
-
 "   ◤          ◥   "
 "    Indentação    "
 "   ◣          ◢   "
