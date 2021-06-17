@@ -39,7 +39,6 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellesca
 autocmd FileType c map <F9> : !gcc % && ./a.out <CR>
 
 
-
 "   ◤          ◥   "
 "    Indentação    "
 "   ◣          ◢   "
@@ -60,7 +59,7 @@ set tabstop=4 "tab 4 espacos
 "   ◣         ◢   "
 syntax enable "ative highlight de sintaxe
 set number "numero da linha
-"set cursorline "highlight na linha atual
+set cursorline "highlight na linha atual
 set wildmenu "menu de selecao de sugestoes no modo comando
 set showmatch "mostra match de paratensis, chaves, colchetes...
 set lazyredraw "melhoria de desempenho
