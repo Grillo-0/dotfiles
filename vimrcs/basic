@@ -1,4 +1,6 @@
-" MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader = ","
 let g:neocomplete#enable_at_startup = 1
@@ -28,7 +30,9 @@ map <right> <nop>
 "ç para voltar pro modo normal
 imap jj <Esc>
 
-" Indentação
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentação
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on
 set autoindent "indentacao automatica
@@ -40,7 +44,9 @@ let delimitMate_expand_cr=1
 set shiftwidth=4 "tamanho do tab na indentacao
 set tabstop=4 "tab 4 espacos
 
-" Geral
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Geral
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable "ative highlight de sintaxe
 set number "numero da linha
@@ -68,37 +74,50 @@ if has("autocmd")
   \| exe "normal! g'\"" | endif
 endif
 
-" Undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Parenthesis/bracket expanding
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Garante que a a pasta que armazena os Undo exista
-if !isdirectory($HOME."/.vim")
-  call mkdir($HOME."/.vim", "", 0770)
-endif
-if !isdirectory($HOME."/.vim/undo-dir")
-  call mkdir($HOME."/.vim/undo-dir", "", 0700)
-endif
-set undodir=~/.vim/undo-dir "pasta que armazena undos
-set undofile "permite que o historico de undos seja salvo em um arquivo
-set undolevels=1000 "tamanho do historico de undos
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a`<esc>`<i`<esc>
 
-" Pesquisa
+" Map auto complete of (, ", ', [
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pesquisa
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set incsearch "highlight na pesquisa equanto eh realizada
 set hlsearch "highlight apos a pesquisa ser feita
 
-" Folds
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Folds
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldenable "habilita poder usar o fold
 set foldlevelstart=10 "nivel inicial de folding, pra nao dobrar tudo no inicio, quanto mais {{, maior o nivel
 set foldnestmax=10
 set foldmethod=syntax "usa sintaxe para esconder: {} em C
 
-" Seta os diretórios de backups
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Backups & Undo
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let &directory = expand('~/.vimdata/swap//')
 set backup
 let &backupdir = expand('~/.vimdata/backup//')
 set undofile
+set undolevels=1000 "tamanho do historico de undos
 let &undodir = expand('~/.vimdata/undo//')
 if !isdirectory(&undodir) | call mkdir(&undodir, "p") | endif
 if !isdirectory(&backupdir) | call mkdir(&backupdir, "p") | endif
