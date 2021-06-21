@@ -5,4 +5,4 @@ autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellesca
 
 " C
 " F9 to execute the .c
-autocmd FileType c map <F9> : !gcc % && ./a.out <CR>
+autocmd FileType c map <F9> : !gcc -Wall % && ./a.out <CR>
