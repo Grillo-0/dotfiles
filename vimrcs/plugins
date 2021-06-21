@@ -1,3 +1,7 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pluggin Install
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 "Instala automaticamente o gerenciador de plugins Vim Plug e instala os
 if empty(glob('~/.vim/autoload/plug.vim'))
  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -19,8 +23,14 @@ call plug#begin('~/.vim/plugged')
 	Plug 'thosakwe/vim-flutter'
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Airline(Status Bar)
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:airline_powerline_fonts = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 colorscheme dracula
