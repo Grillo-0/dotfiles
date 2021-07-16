@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'dart-lang/dart-vim-plugin'
 	Plug 'thosakwe/vim-flutter'
+    Plug 'junegunn/rainbow_parentheses.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -34,3 +35,13 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme dracula
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RainbowParentheses
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:rainbow#max_level = 16
+
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+
+autocmd FileType * RainbowParentheses
