@@ -2,12 +2,7 @@
 " => MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-let mapleader = ","
-let g:neocomplete#enable_at_startup = 1
-let g:NERDSpaceDelims = 1 "add um espaco no comando de comentar
-
-"leader + f altera entre numero absoluto e relativo
-map <leader>f :set relativenumber!<CR>
+let mapleader = "ç"
 
 " Y age como D e C, copia ate o final da linha, ao inves de agir como yy
 map Y y$
@@ -60,7 +55,6 @@ set showcmd "mostra comandos sendo digitados na barra inferior
 set hidden "melhor uso de buffers na mesma janela
 set backup "gera arquivo de backup
 set ttyfast "melhoria de desempenho, ver :h ttyfast
-set title "muda o titulo do terminal
 set encoding=utf-8 "codificacao utf-8
 set autoread
 
@@ -101,9 +95,7 @@ set hlsearch "highlight apos a pesquisa ser feita
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldenable "habilita poder usar o fold
-set foldlevelstart=10 "nivel inicial de folding, pra nao dobrar tudo no inicio, quanto mais {{, maior o nivel
-set foldnestmax=10
-set foldmethod=syntax "usa sintaxe para esconder: {} em C
+set foldmethod=syntax
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Backups & Undo
