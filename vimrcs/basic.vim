@@ -46,6 +46,7 @@ set expandtab "setting tab to spaces"
 syntax enable "ative highlight de sintaxe
 set number "numero da linha
 set cursorline "highlight na linha atual
+set colorcolumn=80 
 set wildmenu "menu de selecao de sugestoes no modo comando
 set showmatch "mostra match de paratensis, chaves, colchetes...
 set lazyredraw "melhoria de desempenho
