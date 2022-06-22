@@ -37,7 +37,6 @@ set backspace=indent,eol,start
 set shiftwidth=4 "tamanho do tab na indentacao
 set tabstop=4 "tab 4 espacos
 set softtabstop=4
-set expandtab "setting tab to spaces"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Geral
@@ -83,6 +82,10 @@ inoremap $3 {}<esc>i
 inoremap $4 {<esc>o}<esc>O
 inoremap $q ''<esc>i
 inoremap $e ""<esc>i
+
+set list
+set lcs=tab:--,trail:¬
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pesquisa
