@@ -75,6 +75,7 @@ plugins=(git aliases)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export LESS=FRX
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
