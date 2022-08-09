@@ -19,13 +19,9 @@ set $mod Mod1
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- v3lock
-bindsym $mod+Control+l exec --no-startup-id v3lock
+# set locker
+exec --no-startup-id xautolock -time 10 -locker fancy-i3lock
+bindsym $mod+Control+l exec --no-startup-id xautolock -locknow
 
 # start compositor
 exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
