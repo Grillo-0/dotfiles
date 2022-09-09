@@ -50,6 +50,14 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +20% # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 20%- # decrease screen brightness
 
+# Notification control
+
+bindsym Control+space exec --no-startup-id dunstctl close
+bindsym Control+Shift+space exec --no-startup-id dunstctl close-all
+bindsym Control+dead_tilde exec --no-startup-id dunstctl history-pop
+bindsym Control+period exec --no-startup-id dunstctl context
+bindsym Control+Return exec --no-startup-id dunstctl action
+
 # Use maim to take PrintScreens
 exec --no-startup-id mkdir -p /tmp/screenshots
 bindsym $mod+Control+Shift+p exec --no-startup-id maim -s -D -u -r boxzoom /tmp/screenshots/$(date -u +"%d-%m-%Y:%H:%M:%S").png
