@@ -100,3 +100,5 @@ export LESS=FRX
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# Enable bash completion for zsh
+autoload bashcompinit && bashcompinit
