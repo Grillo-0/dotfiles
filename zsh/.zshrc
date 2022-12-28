@@ -102,3 +102,7 @@ export LESS=FRX
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Enable bash completion for zsh
 autoload bashcompinit && bashcompinit
+
+# Setup for kw
+source $HOME/.local/lib/kw/bash_autocomplete.sh
+export PATH=$HOME/.local/bin:$PATH # kw
