@@ -24,7 +24,7 @@ exec --no-startup-id xautolock -time 30 -locker auto-lock-screen.sh -nowlocker o
 bindsym $mod+Control+l exec --no-startup-id xautolock -locknow
 
 # start compositor
-exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id compton -b
 
 # set background image
 exec --no-startup-id ~/.fehbg
