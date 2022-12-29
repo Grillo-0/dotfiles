@@ -28,3 +28,6 @@ autoload bashcompinit && bashcompinit
 # Setup for kw
 source $HOME/.local/lib/kw/bash_autocomplete.sh
 export PATH=$HOME/.local/bin:$PATH # kw
+
+# Add scripts to PATH
+export PATH=$HOME/.scripts:$PATH
