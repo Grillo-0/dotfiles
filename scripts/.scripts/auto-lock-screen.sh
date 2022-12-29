@@ -14,5 +14,5 @@ is_fullscreen() {
 # main()
 id=$(get_active_id)
 if is_fullscreen $id; then
-	$HOME/scripts/overlay-lock.sh
+	overlay-lock.sh
 fi
