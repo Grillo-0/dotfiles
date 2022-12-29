@@ -23,14 +23,6 @@ window:
   # The value `0.0` is completely transparent and `1.0` is opaque.
   opacity: 0.85
 
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels.
-  # If both are `0`, this setting is ignored.
-  dimensions:
-    columns: 80
-    lines: 40
-
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
