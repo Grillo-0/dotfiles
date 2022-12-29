@@ -67,50 +67,28 @@ scrolling:
 
 # Font configuration (changes require restart)
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux) monospace
-    #   - (Windows) Consolas
-    #family: mononoki Nerd Font Mono
-    family: iosevka
+    family: iosevka term
+    style: Semibold
 
-    # The `style` can be specified to pick a specific face.
-    style: Regular
-
-  # Bold font face
   bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: mononoki Nerd Font Mono
     family: iosevka
+    style: Extrabold
 
-    # The `style` can be specified to pick a specific face.
-    style: Bold
-
-  # Italic font face
   italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: mononoki Nerd Font Mono
     family: iosevka
-
-    # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Semibold Italic
 
   bold_italic:
     family: iosevka
-    style: Bold Italic
+    style: Extrabold Italic
+
+  bold_oblique:
+    family: iosevka
+    style: Extrabold Oblique
 
   # Point size
-  size: 9
+  size: 10
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
