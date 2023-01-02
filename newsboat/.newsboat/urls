@@ -3,3 +3,5 @@ https://planet.freedesktop.org/rss20.xml "~Planet Freedesktop" "NEWS"
 https://lwn.net/headlines/newrss "NEWS"
 
 https://vkc.sh/feed/ "~Veronica Explains" "BLOG"
+
+https://github.com/i3/i3/discussions/categories/announcements.atom "~i3 Announcements" "REPOS"
