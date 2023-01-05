@@ -11,14 +11,6 @@
 
 set $mod Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
-
 # set locker
 exec --no-startup-id xautolock -time 10 -locker $HOME/.scripts/auto-lock-screen.sh -nowlocker $HOME/.scripts/overlay-lock.sh
 bindsym $mod+Control+l exec --no-startup-id xautolock -locknow
@@ -208,6 +200,9 @@ gaps outer 5
 
 smart_gaps on
 smart_borders on
+
+# Font for window titles. Will also be used by the bar unless a different font
+font pango:iosevka SemiBold 9
 
 set $bg     #282828
 set $fg     #ebdbb2
