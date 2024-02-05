@@ -8,8 +8,7 @@ return require('packer').startup(function(use)
 	use "wbthomason/packer.nvim" -- Package Manager
 	use "ellisonleao/gruvbox.nvim" -- Gruvbox Color Scheme
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim', brach = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use 'tpope/vim-fugitive' -- Git Wrapper
