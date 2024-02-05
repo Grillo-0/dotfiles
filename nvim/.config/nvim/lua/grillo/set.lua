@@ -40,3 +40,5 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.opt.exrc = true
+vim.opt.secure = true

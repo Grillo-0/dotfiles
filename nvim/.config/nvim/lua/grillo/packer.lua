@@ -39,4 +39,6 @@ return require('packer').startup(function(use)
 	}
 
 	use('mbbill/undotree')
+	use('tpope/vim-unimpaired')
+	use('/gpanders/editorconfig.nvim')
 end)
