@@ -1,8 +1,8 @@
 include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
 include ./keybinds
 
-browser brave-browser
+browser firefox
 
 auto-reload yes
 
-article-sort-order date-desc
+article-sort-order date-asc

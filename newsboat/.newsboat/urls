@@ -1,7 +1,9 @@
 http://radar.spacebar.org/f/a/weblog/rss/1 "NEWS"
 https://planet.freedesktop.org/rss20.xml "~Planet Freedesktop" "NEWS"
 https://lwn.net/headlines/newrss "NEWS"
+https://www.phoronix.com/rss.php "NEWS"
 
 https://vkc.sh/feed/ "~Veronica Explains" "BLOG"
-
-https://github.com/i3/i3/discussions/categories/announcements.atom "~i3 Announcements" "REPOS"
+https://andrealmeid.com/post/index.xml "~Tony" "BLOG"
+https://melissawen.github.io/feed.xml "~Melissa" "BLOG"
+https://emersion.fr/blog/atom.xml "BLOG"
