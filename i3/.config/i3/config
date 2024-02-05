@@ -16,7 +16,10 @@ exec --no-startup-id xautolock -time 10 -locker $HOME/.scripts/auto-lock-screen.
 bindsym $mod+Control+l exec --no-startup-id xautolock -locknow
 
 # start compositor
-exec --no-startup-id compton -b
+exec --no-startup-id compton -b --backend=glx
+
+# start dunst
+exec --no-startup-id dunst
 
 # set background image
 exec --no-startup-id ~/.fehbg
@@ -39,8 +42,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +20% # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 20%- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%- # decrease screen brightness
 
 # Notification control
 
@@ -61,7 +64,7 @@ bindsym $mod+p exec --no-startup-id maim -u | xclip -selection clipboard -t imag
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+t exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,14 +189,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # You can also use any non-zero value if you'd like to have a border
-gaps inner 10
-gaps outer 5
+gaps inner 0
+gaps outer 0
 
 smart_gaps on
 smart_borders on
 
 # Disables window titles
-default_border pixel 3
+#default_border pixel 3
 
 # Font for window titles. Will also be used by the bar unless a different font
 font pango:iosevka SemiBold 9
@@ -211,10 +214,10 @@ set $gray   #928374
 
 # green gruvbox
 # class                 border    backgr    text   indicator child_border
-client.focused          $green    $green    $bg    $aqua       $green
-client.focused_inactive $green    $bg	    $fg    $aqua       $bg
-client.unfocused        $bg       $bg       $fg    $aqua       $bg
-client.urgent           $red      $red      $bg    $aqua       $bg
+client.focused          $green    $green    $bg    $aqua     $green
+client.focused_inactive $green    $bg	    $fg    $aqua     $bg
+client.unfocused        $bg       $bg       $fg    $aqua     $bg
+client.urgent           $red      $red      $bg    $aqua     $bg
 
 bar {
 	status_command i3status
