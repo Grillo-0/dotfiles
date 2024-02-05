@@ -22,12 +22,14 @@ plugins=(git aliases sudo zsh-autosuggestions)
 # Source omz script
 source $ZSH/oh-my-zsh.sh
 
-# Enable bash completion
+# Ensure default LLVM compilation for kernel
+export LLVM=1
+
+# Set editor to nvim
+export EDITOR=/usr/bin/nvim
+
+# Enable bash completion for zsh
 autoload bashcompinit && bashcompinit
-
-# Setup for kw
-source $HOME/.local/lib/kw/bash_autocomplete.sh
-export PATH=$HOME/.local/bin:$PATH # kw
-
-# Add scripts to PATH
-export PATH=$HOME/.scripts:$PATH
+# kw
+source /home/grillo/.local/lib/kw/bash_autocomplete.sh
+PATH=/home/grillo/.local/bin:$PATH # kw
