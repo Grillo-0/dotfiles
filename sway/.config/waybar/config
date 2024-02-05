@@ -1,0 +1,89 @@
+{
+    "position": "bottom",
+    "height": 12,
+    "spacing": 12,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "disk", "backlight", "battery", "battery#bat2", "pulseaudio", "tray"],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "icon-size": 18,
+	"icon-theme": "Papirus",
+        "spacing": 8
+    },
+    "clock": {
+	"format": "{:%H:%M}",
+	"format-alt": "{:%d-%m-%y}",
+	"tooltip-format": "{calendar}",
+	"calendar": {
+	    "mode": "month",
+	    "mode-mon-col"  : 3,
+	    "format": {
+		"months":     "<span color='#ffead3'>{}</span>",
+		"days":       "<span color='#ebdbb2'>{}</span>",
+		"weekdays":   "<span color='#fabd2f'>{}</span>",
+		"today":      "<span color='#83a598'><b><u>{}</u></b></span>"
+	    }
+	},
+	"actions":  {
+	    "on-click-right": "mode",
+	}
+	
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{used}G "
+    },
+    "disk": {
+	"format": "{free} /",
+    },
+    "temperature": {
+	"format": "{temperatureC}°C "
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+	"format-icons": ["○", "◑", "●"]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 🗲",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "{ipaddr}/{cidr} 🖧",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+	"format-muted": "(muted) ",
+        "format-icons": {
+            "headphone": "",
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}
