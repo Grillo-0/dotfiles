@@ -12,7 +12,8 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use 'tpope/vim-fugitive' -- Git Wrapper
-	use 'airblade/vim-gitgutter' -- Git diff markers
+	use 'airblade/-gitgutter'
+	use 'lewis6991/gitsigns.nvim' -- Git diff markers
 	use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}) -- Syntax highlighting with Tree-sitter
 
 	-- LSP Zero for LSP shenanigans

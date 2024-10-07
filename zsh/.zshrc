@@ -33,3 +33,19 @@ autoload bashcompinit && bashcompinit
 # kw
 source /home/grillo/.local/lib/kw/bash_autocomplete.sh
 PATH=/home/grillo/.local/bin:$PATH # kw
+
+alias vim=nvim
+alias vi=nvim
+
+# jj completions
+autoload -U compinit
+compinit
+source <(jj util completion zsh)
+
+export BUNDLE_PATH=~/.gems
+
+
+# Enable ssh agent at the beginning
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)"
+fi

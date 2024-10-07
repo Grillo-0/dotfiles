@@ -37,3 +37,4 @@ end)
 lsp.setup()
 
 vim.diagnostic.disable()
+vim.lsp.set_log_level("off")

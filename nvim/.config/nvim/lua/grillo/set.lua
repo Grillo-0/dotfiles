@@ -27,6 +27,7 @@ vim.opt.listchars = {
 	lead = "·",
 	nbsp = "␣"
 }
+
 vim.cmd("match ErrorMsg \"\\s\\+$\"")
 vim.opt.list = true
 
@@ -37,8 +38,18 @@ vim.opt.undofile = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+vim.opt.sidescrolloff = 1
+vim.opt.signcolumn = "auto"
+
+vim.opt.statusline = table.concat({
+	" %f ",
+	"%r%m%h%w%q",
+	"%=",
+	"%l,%c",
+	"%=",
+	"%p%% %y ",
+})
+vim.opt.statuscolumn = "%s%C%{%v:relnum? '%r' : '%#Normal#%=%l'%}%#LineNr#%=│"
 
 vim.opt.exrc = true
 vim.opt.secure = true

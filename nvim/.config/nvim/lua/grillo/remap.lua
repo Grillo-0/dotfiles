@@ -22,3 +22,6 @@ vim.keymap.set("n", "<leader>Y", [["+y$]])
 
 -- change all occurrences of the word under the cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- change the mk command to an make command
+vim.cmd("ca mk mak")
