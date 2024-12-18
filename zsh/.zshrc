@@ -44,8 +44,8 @@ source <(jj util completion zsh)
 
 export BUNDLE_PATH=~/.gems
 
-
 # Enable ssh agent at the beginning
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)"
+    ssh-add
 fi
