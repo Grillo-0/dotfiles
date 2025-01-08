@@ -25,14 +25,21 @@ return {
 			})
 
 			local capabilities = require('blink.cmp').get_lsp_capabilities()
-			require'lspconfig'.lua_ls.setup { capabilities = capabilities }
-			require'lspconfig'.ccls.setup {
+
+			local lspconfig = require("lspconfig")
+			lspconfig.lua_ls.setup { capabilities = capabilities }
+			lspconfig.ccls.setup {
+				capabilities = capabilities,
 				init_options = {
+					compilationDatabaseDirectory = "build";
 					cache = {
-						directory = ".ccls-cache";
+						directory = "/tmp/ccls-cache";
 					};
 				}
 			}
+			lspconfig.rust_analyzer.setup { capabilities = capabilities }
+			lspconfig.textlsp.setup { capabilities = capabilities }
+			lspconfig.pyright.setup { capabilities = capabilities }
 		end
 	}
 }
