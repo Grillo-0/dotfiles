@@ -6,6 +6,7 @@ return {
 				ensure_installed = {
 					"c",
 					"cpp",
+					"diff",
 					"git_config",
 					"git_rebase",
 					"gitcommit",
@@ -13,6 +14,7 @@ return {
 					"lua",
 					"markdown",
 					"markdown_inline",
+					"python",
 					"query",
 					"vim",
 					"vimdoc",
