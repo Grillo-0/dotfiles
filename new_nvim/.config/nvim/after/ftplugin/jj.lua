@@ -1,1 +1,3 @@
-vim.bo.filetype = "gitcommit"
+local set = vim.opt_local
+
+set.spell= true
