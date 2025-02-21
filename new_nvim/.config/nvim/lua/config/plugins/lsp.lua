@@ -40,6 +40,18 @@ return {
 			lspconfig.rust_analyzer.setup { capabilities = capabilities }
 			lspconfig.textlsp.setup { capabilities = capabilities }
 			lspconfig.pyright.setup { capabilities = capabilities }
+			lspconfig.pyright.setup {
+				root_dir = function(fname)
+					return lspconfig.util.root_pattern(
+						'pyproject.toml',
+						'setup.py',
+						'setup.cfg',
+						'Pipfile',
+						'pyrightconfig.json',
+						'.git'
+					)(fname)
+				end,
+			}
 		end
 	}
 }
