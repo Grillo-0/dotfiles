@@ -17,11 +17,13 @@ return {
 				ensure_installed = {
 					"c",
 					"cpp",
+					"css",
 					"diff",
 					"git_config",
 					"git_rebase",
 					"gitcommit",
 					"gitignore",
+					"html",
 					"jjdescription",
 					"lua",
 					"markdown",
