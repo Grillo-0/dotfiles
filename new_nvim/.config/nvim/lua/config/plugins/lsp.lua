@@ -28,14 +28,12 @@ return {
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup { capabilities = capabilities }
-			lspconfig.ccls.setup {
+			lspconfig.clangd.setup {
 				capabilities = capabilities,
-				init_options = {
-					compilationDatabaseDirectory = "build";
-					cache = {
-						directory = "/tmp/ccls-cache";
-					};
-				}
+				cmd = {
+					"clangd",
+					"--compile-commands-dir=build",
+				},
 			}
 			lspconfig.rust_analyzer.setup { capabilities = capabilities }
 			lspconfig.textlsp.setup { capabilities = capabilities }
